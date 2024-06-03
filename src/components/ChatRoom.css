@@ -1,0 +1,152 @@
+/* Common styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Chat wrapper styles */
+
+.chat-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    height: 80vh; /* Ensuring that the chat-wrapper has a specific height */
+    display: flex;
+    flex-direction: row;
+}
+
+/* User list styles */
+
+.user-list {
+    width: 200px;
+    margin-right: 20px;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+    overflow-y: auto;
+}
+
+.user-list h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.user-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-list li {
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Chat container styles */
+
+.chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.message-list {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message strong {
+    color: #007bff;
+}
+
+/* Input container styles */
+
+.input-container {
+    display: flex;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    align-items: center;
+}
+
+.input-container input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.input-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 17px;
+}
+
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries for mobile devices */
+
+@media (max-width: 768px) {
+    .chat-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .user-list {
+        width: 100%;
+        margin-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+
+    .chat-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 300px); /* Adjust the height for mobile */
+    }
+
+    .message-list {
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+}
